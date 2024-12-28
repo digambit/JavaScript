@@ -1,0 +1,43 @@
+version: '3'
+
+tasks:
+  add-ssh-git:
+    cmds:
+      - ssh-keygen -t rsa -b 4096 -C "dignory.luna777@gmail.com"
+      - eval $(ssh-agent -s)
+      - ssh-add -K ~/.ssh/id_rsa
+      - mkdir -p ~/.ssh
+      - |
+        cat << EOF > ~/.ssh/config
+        Host *
+          AddKeysToAgent yes
+          UseKeychain yes
+          IdentityFile ~/.ssh/id_rsa
+        EOF
+      - echo "SSH configuration added successfully."
+
+  config-git:
+    cmds:
+      - git config --global user.email "dignory.luna777@gmail.com"
+      - git config --global user.name "Dignory Carmona"
+
+  start:
+    cmds:
+      - yarn install
+      - yarn dev
+      
+  commit-react:
+    cmds:
+      - yarn build
+      - git commit -a
+
+  commit:
+    cmds:
+      - git add .
+      - git commit
+      - git push
+      
+  change-message:
+    cmds:
+      - git commit --amend
+      - git push -f origin "main"

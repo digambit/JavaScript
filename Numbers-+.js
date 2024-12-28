@@ -12,7 +12,6 @@ function processArray(array) {
     for (let i = 0; i < n; i++) {
         while (array[i] !== i + 1) {
             let p = array[i + 1];
-            let f = (i + 1);
             array[p] = array[i];
             array[i] = p;
         }
