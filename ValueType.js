@@ -24,6 +24,6 @@ function solution(value) {
     return typeof value
 }
 
-const value = 1
+const value = "Dig"
 const result = solution(value)
 console.log(result)
