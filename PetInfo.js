@@ -65,3 +65,8 @@ function getPetExerciseInfo(type, age) {
         return "Tipo de mascota inválida"
     }
 }
+
+const type = "perro"
+const age = 5
+const getPetExerciseInfo(type, age)
+console.log(result)
