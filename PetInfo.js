@@ -46,27 +46,27 @@ Output: "Invalid pet type" */
 
 function getPetExerciseInfo(type, age) {
     switch (type) {
-    case "perro":
-        if (age < 1) return "Los cachorros necesitan pequeñas y frecuentes  sesiones de juego"
-        else if (age >= 1 && age <= 7) return "Los perros a esta edad necesitan caminatas diarias y sesiones de juego"
-        else return "Los perros viejos necesitan caminatas más cortas"
+    case "dog":
+        if (age < 1) return "Puppies need short, frequent play sessions"
+        else if (age >= 1 && age <= 7) return "Dogs at this age need daily walks and play sessions"
+        else return "Senior dogs need shorter walks"
         break;
-    case "gato":
-        if (age < 1) return "Los gatitos necesitan frecuentes sesiones de juego"
-        else if (age >= 1 && age <= 7) return "Los gatos a esta edad necesitan jugar diariamente"
-        else return "Los gatos viejos necesitan sesiones de juego más cortas"
+    case "cat":
+        if (age < 1) return "Kittens need frequent play sessions"
+        else if (age >= 1 && age <= 7) return "Cats at this age need to play daily"
+        else return "Senior cats need shorter play sessions"
         break;
-    case "ave":
-        if (age < 1) return "Las aves jóvenes necesitan mucho espacio para volar"
-        else if (age >= 1 && age <= 7) return "Las aves necesitan jugar diariamente y un lugar para volar"
-        else return "Las aves mayores necesitan descansar más, pero siguen ocupando un lugar para volar"
+    case "bird":
+        if (age < 1) return "Young birds need a lot of space to fly"
+        else if (age >= 1 && age <= 7) return "Birds need daily play and a place to fly"
+        else return "Senior birds need more rest, but still need a place to fly"
         break;
     default:
-        return "Tipo de mascota inválida"
+        return "Invalid pet type"
     }
 }
 
-const type = "perro"
+const type = "dog"
 const age = 5
 const getPetExerciseInfo(type, age)
 console.log(result)
