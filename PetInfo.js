@@ -68,5 +68,5 @@ function getPetExerciseInfo(type, age) {
 
 const type = "dog"
 const age = 5
-const getPetExerciseInfo(type, age)
+const result = getPetExerciseInfo(type, age)
 console.log(result)
