@@ -7,9 +7,9 @@ name: name of the kitty
 followers: an array of numbers, where each one represents the followers from each social network.
 Your task is to return an array with the names of cats that have only the highest number of followers. If there are two or more cats with the same maximum number of followers, you should include them in the result array, maintaining the order in which they appear in the input array.
 You will have inputs and outputs like the following 👇
-Example 1:
 
-txtCopyInput: findFamousCats([
+Example 1:
+Input: findFamousCats([
   {
     name: "Luna",
     followers: [500, 200, 300]
@@ -21,8 +21,9 @@ txtCopyInput: findFamousCats([
 ])
 
 Output: ["Luna"]
+
 Example 2:
-txtCopyInput: findFamousCats([
+Input: findFamousCats([
   {
     name: "Mimi",
     followers: [320, 120, 70]
