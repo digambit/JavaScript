@@ -129,4 +129,23 @@ function createTaskPlanner() {
     }
 }
 
+const planner = createTaskPlanner();
+
+planner.addTask({
+    id: 1,
+    name: "Buy milk",
+    priority: 1,
+    tags: ["shopping", "home"]
+});
+
+planner.addTask({
+    id: 2,
+    name: "Call John",
+    priority: 3,
+    tags: ["personal"]
+});
+
+planner.markTaskAsCompleted("Call John");
+
+console.log(planner.getCompletedTasks());
 
